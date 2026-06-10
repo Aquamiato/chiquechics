@@ -1,30 +1,451 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Chique Chics | High-Fashion Women's Apparel & Editorial Style</title>
-    <meta
-      name="description"
-      content="Discover curated luxury fashion, ready-to-wear essentials, and bold statements at Chique Chics. Premium quality crafted for the modern, elegant woman."
-    />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="favicon.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <title>Chique Chics | Avant-Garde Luxury Fashion & Editorial Journal</title>
+    <meta name="description" content="Chique Chics premium editorial fashion drops, sleek tailoring, and timeless capsule collections." />
     
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAARElEQVRYR2NgGAWjYBSMglEwCkbBSAMwctM66gfoH6B/gP4B+gfY0wK6p/XUD9A/QP8A/QPsGQWjYBSMglEwCkbBKBjZAAA99wXxwbyZiwAAAABJRU5ErkJggg==" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        color-scheme: dark;
+        --font-luxury: 'Cinzel', serif;
+        --font-modern: 'Space Grotesk', sans-serif;
+        
+        --bg-deep: #050505;
+        --accent-gold: #dfba6b;
+        --text-pure: #ffffff;
+        --text-dim: rgba(255, 255, 255, 0.7);
+        --text-dark: rgba(255, 255, 255, 0.4);
+        --border: rgba(255, 255, 255, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body {
+        background: var(--bg-deep);
+        color: var(--text-dim);
+        font-family: var(--font-modern);
+        min-height: 100%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      /* Enteresan Arka Plan Işık Oyunları */
+      body::before {
+        content: '';
+        position: fixed;
+        top: -10%;
+        left: -10%;
+        width: 120%;
+        height: 120%;
+        background: 
+          radial-gradient(circle at 80% 20%, rgba(223, 186, 107, 0.04), transparent 40%),
+          radial-gradient(circle at 15% 75%, rgba(255, 255, 255, 0.02), transparent 35%);
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      /* --- Navigasyon (Premium Cam Efekti) --- */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 4rem;
+        background: rgba(5, 5, 5, 0.75);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .brand a {
+        font-family: var(--font-luxury);
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--text-pure);
+        text-shadow: 0 0 10px rgba(255,255,255,0.1);
+      }
+
+      .site-nav {
+        display: flex;
+        gap: 3rem;
+      }
+
+      .site-nav a {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--text-dark);
+        font-weight: 500;
+        position: relative;
+      }
+
+      .site-nav a::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--accent-gold);
+        transition: width 0.3s ease;
+      }
+
+      .site-nav a:hover {
+        color: var(--text-pure);
+      }
+
+      .site-nav a:hover::after {
+        width: 100%;
+      }
+
+      /* --- Hero Bölümü (Sinematik Video Alanı) --- */
+      .hero {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 4rem;
+        overflow: hidden;
+      }
+
+      .hero-media {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .hero-media video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.4) contrast(1.1);
+      }
+
+      /* Karartma ve Gradyan Geçişi */
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(5,5,5,0.2) 0%, rgba(5,5,5,0.95) 100%);
+        z-index: 1;
+      }
+
+      .hero-copy {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        display: grid;
+        gap: 2rem;
+        animation: fadeInUp 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .eyebrow {
+        font-family: var(--font-luxury);
+        font-size: 0.9rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--accent-gold);
+      }
+
+      .hero h1 {
+        font-family: var(--font-luxury);
+        font-size: clamp(3.5rem, 7vw, 6.5rem);
+        line-height: 1.05;
+        font-weight: 400;
+        color: var(--text-pure);
+        letter-spacing: -0.02em;
+      }
+
+      .hero-text {
+        font-size: 1.15rem;
+        max-width: 32rem;
+        font-weight: 300;
+        line-height: 1.7;
+        color: var(--text-dim);
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      /* --- Butonlar (Minimalist & Sıradışı Efektli) --- */
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.2rem 2.8rem;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        font-weight: 500;
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .button-primary {
+        background: var(--text-pure);
+        color: var(--bg-deep);
+      }
+
+      .button-primary:hover {
+        background: transparent;
+        color: var(--text-pure);
+        border-color: var(--text-pure);
+        box-shadow: 0 10px 30px rgba(255,255,255,0.05);
+      }
+
+      .button-secondary {
+        background: transparent;
+        color: var(--text-pure);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .button-secondary:hover {
+        background: rgba(255, 255, 255, 0.03);
+        border-color: var(--accent-gold);
+        color: var(--accent-gold);
+      }
+
+      /* --- Özellikler / Koleksiyon Kartları (Enteresan Düzen) --- */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+        padding: 8rem 4rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .feature-card {
+        background: rgba(255, 255, 255, 0.01);
+        border: 1px solid var(--border);
+        padding: 3.5rem 2.5rem;
+        display: grid;
+        gap: 1.5rem;
+        position: relative;
+        transition: all 0.5s ease;
+      }
+
+      /* Kartların asimetrik durması için enteresan dokunuş */
+      .feature-card:nth-child(2) {
+        transform: translateY(-20px);
+      }
+
+      .feature-card:hover {
+        border-color: var(--accent-gold);
+        background: rgba(223, 186, 107, 0.02);
+        transform: translateY(-5px);
+      }
+
+      .feature-card:nth-child(2):hover {
+        transform: translateY(-25px);
+      }
+
+      .feature-card h2 {
+        font-family: var(--font-luxury);
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--text-pure);
+        letter-spacing: 0.05em;
+      }
+
+      .feature-card p {
+        font-size: 0.95rem;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+
+      /* --- Editoryal Öne Çıkan Bölüm --- */
+      .highlight {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 6rem;
+        padding: 8rem 4rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .highlight-copy {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .highlight-copy h2 {
+        font-family: var(--font-luxury);
+        font-size: clamp(2.5rem, 4vw, 4rem);
+        font-weight: 400;
+        line-height: 1.15;
+        color: var(--text-pure);
+      }
+
+      .highlight-copy p {
+        font-size: 1.1rem;
+        font-weight: 300;
+        line-height: 1.7;
+      }
+
+      .highlight-image {
+        position: relative;
+      }
+
+      /* Görsel arkasındaki dekoratif altın çerçeve */
+      .highlight-image::before {
+        content: '';
+        position: absolute;
+        inset: 20px -20px -20px 20px;
+        border: 1px solid var(--accent-gold);
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .highlight-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        z-index: 1;
+        filter: grayscale(0.2) contrast(1.05);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .highlight-image:hover img {
+        transform: scale(1.02);
+      }
+
+      /* --- Dergi / Journal Alanı --- */
+      .news {
+        padding: 6rem 4rem 10rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .news-card {
+        background: linear-gradient(135deg, rgba(255,255,255,0.01) 0%, rgba(223, 186, 107, 0.02) 100%);
+        border: 1px solid var(--border);
+        padding: 5rem;
+        display: grid;
+        gap: 2rem;
+        text-align: center;
+        justify-items: center;
+      }
+
+      .news-card h2 {
+        font-family: var(--font-luxury);
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: var(--text-pure);
+        letter-spacing: 0.1em;
+      }
+
+      .news-card p {
+        font-size: 1.1rem;
+        font-weight: 300;
+        max-width: 36rem;
+        line-height: 1.7;
+      }
+
+      /* --- Footer --- */
+      .site-footer {
+        padding: 4rem 2rem;
+        text-align: center;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        color: var(--text-dark);
+        border-top: 1px solid var(--border);
+      }
+
+      /* --- Animasyonlar --- */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* --- Responsive (Mobil Uyumluluk) --- */
+      @media (max-width: 1024px) {
+        .features, .highlight {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+          padding: 6rem 2rem;
+        }
+        .feature-card:nth-child(2) {
+          transform: none;
+        }
+        .feature-card:nth-child(2):hover {
+          transform: translateY(-5px);
+        }
+        .hero {
+          padding: 0 2rem;
+        }
+        .site-header {
+          padding: 1.5rem 2rem;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .site-header {
+          flex-direction: column;
+          gap: 1.5rem;
+          text-align: center;
+        }
+        .site-nav {
+          gap: 1.5rem;
+        }
+        .hero h1 {
+          font-size: 3rem;
+        }
+        .hero-actions {
+          flex-direction: column;
+        }
+        .button {
+          width: 100%;
+        }
+        .news-card {
+          padding: 3rem 1.5rem;
+        }
+      }
+    </style>
   </head>
   <body>
+
     <header class="site-header">
       <div class="brand">
         <a href="https://chiquechics.com/">Chique Chics</a>
       </div>
       <nav class="site-nav">
-        <a href="https://chiquechics.com/collections" class="active">Shop</a>
+        <a href="https://chiquechics.com/collections">Shop</a>
         <a href="https://chiquechics.com/collections">Collections</a>
         <a href="https://chiquechics.com/blogs/journal">Journal</a>
       </nav>
@@ -33,76 +454,65 @@
     <main>
       <section class="hero">
         <div class="hero-media">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            poster="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop"
-          >
-            <source
-              src="https://chiquechics.com/cdn/shop/videos/hero-campaign-drop.mp4"
-              type="video/mp4"
-            />
+          <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop">
+            <source src="https://chiquechics.com/cdn/shop/videos/hero-campaign-drop.mp4" type="video/mp4" />
           </video>
           <div class="hero-overlay"></div>
         </div>
         <div class="hero-copy">
-          <p class="eyebrow">Curated luxury silhouettes for the contemporary woman.</p>
-          <h1>Redefine your style</h1>
+          <p class="eyebrow">The New Era of High-Fashion</p>
+          <h1>Redefine your silhouette</h1>
           <p class="hero-text">
-            Explore Chique Chics' premium editorial drops, sleek tailoring, and timeless closet staples designed to captivate.
+            Sıradanlıktan uzak, tamamen Chique Chics kadını için özenle tasarlanmış editoryal koleksiyonlar ve avant-garde parçalar.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://chiquechics.com/collections">Explore the Drop</a>
-            <a class="button button-secondary" href="https://chiquechics.com/blogs/journal">Read the Journal</a>
+            <a class="button button-primary" href="https://chiquechics.com/collections">Koleksiyonu İncele</a>
+            <a class="button button-secondary" href="https://chiquechics.com/blogs/journal">Journal Oku</a>
           </div>
         </div>
       </section>
 
       <section class="features" id="shop">
         <div class="feature-card">
-          <h2>Tailored Essentials</h2>
-          <p>Discover sharp structures and fluid silhouettes crafted to transition effortlessly from daylight to nocturnal settings.</p>
+          <h2>Kusursuz Terzilik</h2>
+          <p>Gündüzden geceye akıcı bir geçiş sağlayan, keskin hatlara ve lüks kumaş dokularına sahip tasarımlar.</p>
         </div>
         <div class="feature-card">
-          <h2>Bold Expressions</h2>
-          <p>Elevate your everyday capsule wardrobe with intentionally curated textiles, unexpected cuts, and refined luxury textures.</p>
+          <h2>Sıradışı İfade</h2>
+          <p>Trendlerin ötesinde, gardırobunuza zamansız bir lüks katmak için tasarlanmış cesur ve minimalist detaylar.</p>
         </div>
         <div class="feature-card">
-          <h2>Complimentary Delivery</h2>
-          <p>Indulge in premium packaging and seamless express shipping directly to your door, worldwide.</p>
+          <h2>Global Teslimat</h2>
+          <p>Chique Chics imzalı özel paketleme ve dünya genelinde kusursuz ekspres teslimat ayrıcalığı.</p>
         </div>
       </section>
 
       <section class="highlight" id="collections">
         <div class="highlight-copy">
-          <span class="eyebrow">The Editorial Collection</span>
-          <h2>Crafted for those who wear confidence effortlessly.</h2>
+          <span class="eyebrow">Chique Chics Vision</span>
+          <h2>Özgüvenini eforsuzca taşıyanlar için.</h2>
           <p>
-            Our micro-collections focus on premium design longevity over temporary trends. Every item features deliberate details engineered to belong in a modern minimalist collection.
+            Her bir mikro koleksiyon, geçici trendler yerine kalıcı tasarım estetiğine odaklanır. Modern minimalizmin sınırlarını yeniden çizen kumaş mühendisliği ve işçilik.
           </p>
-          <a class="button button-primary" href="https://chiquechics.com/collections">View the Looks</a>
+          <a class="button button-primary" href="https://chiquechics.com/collections">Görünümleri Keşfet</a>
         </div>
         <div class="highlight-image">
-          <img
-            src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=1000&auto=format&fit=crop"
-            alt="Chique Chics Premium Lookbook Collection"
-          />
+          <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=1000&auto=format&fit=crop" alt="Chique Chics Premium Lookbook" />
         </div>
       </section>
 
       <section class="news" id="news">
         <div class="news-card">
           <h2>The Journal</h2>
-          <p>Step behind the seams. Read our layout design philosophies, style profiles, and exclusive interviews with contemporary tastemakers.</p>
-          <a class="button button-secondary" href="https://chiquechics.com/blogs/journal">Enter the Journal</a>
+          <p>Modanın perde arkasına geçin. Tasarım felsefelerimiz, stil ipuçları ve vizyoner yaratıcılarla röportajlar burada.</p>
+          <a class="button button-secondary" href="https://chiquechics.com/blogs/journal">Dergiye Giriş Yap</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 Chique Chics. High-Fashion Apparel & Editorial Style. All rights reserved.</p>
+      <p>© 2026 Chique Chics. High-Fashion & Editorial Style. Tüm hakları saklıdır.</p>
     </footer>
+
   </body>
 </html>
