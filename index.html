@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -42,7 +42,6 @@
         scroll-behavior: smooth;
       }
 
-      /* Enteresan Arka Plan Işık Oyunları */
       body::before {
         content: '';
         position: fixed;
@@ -63,7 +62,7 @@
         transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      /* --- Navigasyon (Premium Cam Efekti) --- */
+      /* --- Navigation --- */
       .site-header {
         position: sticky;
         top: 0;
@@ -121,7 +120,7 @@
         width: 100%;
       }
 
-      /* --- Hero Bölümü (Sinematik Video Alanı) --- */
+      /* --- Hero Section --- */
       .hero {
         position: relative;
         height: 100vh;
@@ -144,7 +143,6 @@
         filter: brightness(0.4) contrast(1.1);
       }
 
-      /* Karartma ve Gradyan Geçişi */
       .hero-overlay {
         position: absolute;
         inset: 0;
@@ -192,7 +190,7 @@
         margin-top: 1rem;
       }
 
-      /* --- Butonlar (Minimalist & Sıradışı Efektli) --- */
+      /* --- Buttons --- */
       .button {
         display: inline-flex;
         align-items: center;
@@ -231,7 +229,7 @@
         color: var(--accent-gold);
       }
 
-      /* --- Özellikler / Koleksiyon Kartları (Enteresan Düzen) --- */
+      /* --- Features Section --- */
       .features {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -251,7 +249,6 @@
         transition: all 0.5s ease;
       }
 
-      /* Kartların asimetrik durması için enteresan dokunuş */
       .feature-card:nth-child(2) {
         transform: translateY(-20px);
       }
@@ -280,7 +277,7 @@
         line-height: 1.6;
       }
 
-      /* --- Editoryal Öne Çıkan Bölüm --- */
+      /* --- Highlight Showcase --- */
       .highlight {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -314,7 +311,6 @@
         position: relative;
       }
 
-      /* Görsel arkasındaki dekoratif altın çerçeve */
       .highlight-image::before {
         content: '';
         position: absolute;
@@ -338,7 +334,7 @@
         transform: scale(1.02);
       }
 
-      /* --- Dergi / Journal Alanı --- */
+      /* --- News / Journal --- */
       .news {
         padding: 6rem 4rem 10rem;
         max-width: 1400px;
@@ -381,7 +377,6 @@
         border-top: 1px solid var(--border);
       }
 
-      /* --- Animasyonlar --- */
       @keyframes fadeInUp {
         from {
           opacity: 0;
@@ -393,7 +388,7 @@
         }
       }
 
-      /* --- Responsive (Mobil Uyumluluk) --- */
+      /* --- Responsive --- */
       @media (max-width: 1024px) {
         .features, .highlight {
           grid-template-columns: 1fr;
@@ -442,12 +437,12 @@
 
     <header class="site-header">
       <div class="brand">
-        <a href="https://chiquechics.com/">Chique Chics</a>
+        <a href="https://aquamiato.com/">Chique Chics</a>
       </div>
       <nav class="site-nav">
-        <a href="https://chiquechics.com/collections">Shop</a>
-        <a href="https://chiquechics.com/collections">Collections</a>
-        <a href="https://chiquechics.com/blogs/journal">Journal</a>
+        <a href="https://aquamiato.com/collections">Shop</a>
+        <a href="https://aquamiato.com/collections">Collections</a>
+        <a href="https://aquamiato.com/blogs/news">Journal</a>
       </nav>
     </header>
 
@@ -455,7 +450,7 @@
       <section class="hero">
         <div class="hero-media">
           <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop">
-            <source src="https://chiquechics.com/cdn/shop/videos/hero-campaign-drop.mp4" type="video/mp4" />
+            <source src="https://aquamiato.com/cdn/shop/videos/c/vp/65df87ba5a814b3dab82f4ca55b7a755/65df87ba5a814b3dab82f4ca55b7a755.SD-480p-1.5Mbps-85505404.mp4?v=0" type="video/mp4" />
           </video>
           <div class="hero-overlay"></div>
         </div>
@@ -463,38 +458,38 @@
           <p class="eyebrow">The New Era of High-Fashion</p>
           <h1>Redefine your silhouette</h1>
           <p class="hero-text">
-            Sıradanlıktan uzak, tamamen Chique Chics kadını için özenle tasarlanmış editoryal koleksiyonlar ve avant-garde parçalar.
+            Step away from the ordinary. Explore avant-garde capsule pieces and editorial statements crafted explicitly for the contemporary wardrobe.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://chiquechics.com/collections">Koleksiyonu İncele</a>
-            <a class="button button-secondary" href="https://chiquechics.com/blogs/journal">Journal Oku</a>
+            <a class="button button-primary" href="https://aquamiato.com/collections">Shop the Collection</a>
+            <a class="button button-secondary" href="https://aquamiato.com/blogs/news">Read the Journal</a>
           </div>
         </div>
       </section>
 
       <section class="features" id="shop">
         <div class="feature-card">
-          <h2>Kusursuz Terzilik</h2>
-          <p>Gündüzden geceye akıcı bir geçiş sağlayan, keskin hatlara ve lüks kumaş dokularına sahip tasarımlar.</p>
+          <h2>Impeccable Tailoring</h2>
+          <p>Sleek structures and premium fluid fabrics engineered to transition seamlessly from day to twilight.</p>
         </div>
         <div class="feature-card">
-          <h2>Sıradışı İfade</h2>
-          <p>Trendlerin ötesinde, gardırobunuza zamansız bir lüks katmak için tasarlanmış cesur ve minimalist detaylar.</p>
+          <h2>Bold Expressions</h2>
+          <p>Intentionally minimal details designed to outlast temporary trends and elevate your capsule identity.</p>
         </div>
         <div class="feature-card">
-          <h2>Global Teslimat</h2>
-          <p>Chique Chics imzalı özel paketleme ve dünya genelinde kusursuz ekspres teslimat ayrıcalığı.</p>
+          <h2>Global Delivery</h2>
+          <p>Indulge in our signature premium packaging along with seamless complimentary worldwide shipping.</p>
         </div>
       </section>
 
       <section class="highlight" id="collections">
         <div class="highlight-copy">
           <span class="eyebrow">Chique Chics Vision</span>
-          <h2>Özgüvenini eforsuzca taşıyanlar için.</h2>
+          <h2>For those who wear confidence effortlessly.</h2>
           <p>
-            Her bir mikro koleksiyon, geçici trendler yerine kalıcı tasarım estetiğine odaklanır. Modern minimalizmin sınırlarını yeniden çizen kumaş mühendisliği ve işçilik.
+            Our targeted macro drops focus on long-term design longevity rather than throwaway fast trends. Re-imagining the lines of modern luxury through conscious craft.
           </p>
-          <a class="button button-primary" href="https://chiquechics.com/collections">Görünümleri Keşfet</a>
+          <a class="button button-primary" href="https://aquamiato.com/collections">Browse Looks</a>
         </div>
         <div class="highlight-image">
           <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=1000&auto=format&fit=crop" alt="Chique Chics Premium Lookbook" />
@@ -504,14 +499,14 @@
       <section class="news" id="news">
         <div class="news-card">
           <h2>The Journal</h2>
-          <p>Modanın perde arkasına geçin. Tasarım felsefelerimiz, stil ipuçları ve vizyoner yaratıcılarla röportajlar burada.</p>
-          <a class="button button-secondary" href="https://chiquechics.com/blogs/journal">Dergiye Giriş Yap</a>
+          <p>Step behind the seams. Read our layout design philosophies, style profiles, and exclusive interviews with modern tastemakers.</p>
+          <a class="button button-secondary" href="https://aquamiato.com/blogs/news">Enter the Journal</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 Chique Chics. High-Fashion & Editorial Style. Tüm hakları saklıdır.</p>
+      <p>© 2026 Chique Chics. High-Fashion & Editorial Style. All rights reserved.</p>
     </footer>
 
   </body>
