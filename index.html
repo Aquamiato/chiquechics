@@ -448,6 +448,7 @@
         <a href="https://aquamiato.com/" aria-label="Chique Chics – Luxury Swimwear & Editorial Fashion">Chique Chics</a>
       </div>
       <nav class="site-nav" aria-label="Main navigation">
+    <button class="aq-mob-toggle" aria-label="Menu">☰</button>
         <a href="https://aquamiato.com/collections">Shop Swimwear</a>
         <a href="https://aquamiato.com/collections">Collections</a>
         <a href="https://aquamiato.com/blogs/news">Journal</a>
@@ -516,6 +517,221 @@
     <footer class="site-footer">
       <p>© 2026 Chique Chics. Luxury Swimwear & Editorial Fashion. <a href="https://aquamiato.com/" style="color:var(--accent-gold);">Shop at Aquamiato</a>. All rights reserved.</p>
     </footer>
+<!-- ══ AQUAMIATO TRAFFIC BOOST BLOCK ══ -->
+<style>
+/* Mobile nav toggle */
+.aq-mob-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;color:inherit;font-size:22px;line-height:1}
+@media(max-width:768px){
+  .aq-mob-toggle{display:block}
+  .aq-nav-links-wrap{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:9998;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+  .aq-nav-links-wrap.open{display:flex}
+  .aq-nav-links-wrap a{font-size:18px;color:#fff;text-decoration:none;letter-spacing:0.15em;text-transform:uppercase}
+  .aq-mob-close{position:absolute;top:24px;right:24px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer}
+}
+
+/* Featured products section */
+.aq-boost-section{
+  padding:60px 24px;
+  background:#f8f5f0;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+.aq-boost-inner{max-width:1100px;margin:0 auto}
+.aq-boost-eyebrow{
+  font-size:10px;letter-spacing:0.3em;text-transform:uppercase;
+  color:#a855f7;margin-bottom:12px;
+}
+.aq-boost-title{
+  font-family:Georgia,serif;font-size:clamp(24px,4vw,38px);
+  font-weight:300;color:#111;margin-bottom:8px;
+}
+.aq-boost-sub{font-size:13px;color:#888;margin-bottom:36px;line-height:1.6}
+
+/* Collections pills */
+.aq-cols-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+.aq-col-pill{
+  display:inline-block;padding:9px 20px;
+  border:1px solid #a855f7;color:#a855f7;
+  font-size:11px;letter-spacing:0.12em;text-transform:uppercase;
+  text-decoration:none;transition:all 0.2s;
+  border-radius:0;
+}
+.aq-col-pill:hover{background:#a855f7;color:#fff}
+
+/* Products grid */
+.aq-prod-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin-bottom:36px;
+}
+@media(max-width:900px){.aq-prod-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.aq-prod-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
+
+.aq-prod-card{
+  text-decoration:none;color:inherit;display:block;
+  background:#fff;transition:transform 0.25s,box-shadow 0.25s;
+}
+.aq-prod-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.1)}
+.aq-prod-img{
+  aspect-ratio:3/4;display:flex;align-items:center;
+  justify-content:center;overflow:hidden;
+}
+.aq-prod-info{padding:12px 14px 16px;border-top:1px solid #f0ebe4}
+.aq-prod-name{font-size:13px;font-family:Georgia,serif;color:#111;margin-bottom:4px;line-height:1.3}
+.aq-prod-price{font-size:12px;color:#a855f7;font-weight:500}
+
+/* CTA row */
+.aq-cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:48px}
+.aq-cta-primary{
+  display:inline-block;padding:14px 36px;
+  background:transparent;color:#111;
+  border:1px solid #111;font-size:11px;
+  letter-spacing:0.15em;text-transform:uppercase;
+  text-decoration:none;transition:all 0.22s;
+}
+.aq-cta-primary:hover{background:#111;color:#fff}
+.aq-cta-ghost{
+  font-size:11px;letter-spacing:0.12em;text-transform:uppercase;
+  color:#888;text-decoration:underline;text-underline-offset:3px;
+  padding:14px 0;
+}
+
+/* Newsletter */
+.aq-nl-section{
+  background:#111;padding:48px 24px;text-align:center;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+.aq-nl-inner{max-width:480px;margin:0 auto}
+.aq-nl-title{
+  font-family:Georgia,serif;font-size:clamp(20px,3vw,28px);
+  font-weight:300;color:#fff;margin-bottom:8px;
+}
+.aq-nl-sub{font-size:12px;color:rgba(255,255,255,0.45);margin-bottom:24px;letter-spacing:0.04em}
+.aq-nl-form{display:flex;gap:0}
+.aq-nl-input{
+  flex:1;background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.15);
+  border-right:none;color:#fff;padding:13px 16px;
+  font-size:13px;outline:none;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+.aq-nl-input::placeholder{color:rgba(255,255,255,0.3)}
+.aq-nl-btn{
+  background:#a855f7;color:#fff;border:none;
+  padding:13px 24px;font-size:10px;letter-spacing:0.15em;
+  text-transform:uppercase;cursor:pointer;white-space:nowrap;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  transition:background 0.2s;
+}
+.aq-nl-btn:hover{background:#c4a080}
+.aq-nl-note{font-size:10px;color:rgba(255,255,255,0.25);margin-top:12px;letter-spacing:0.05em}
+
+/* Trust bar */
+.aq-trust-bar{
+  display:flex;justify-content:center;gap:40px;flex-wrap:wrap;
+  padding:24px;background:#fff;border-top:1px solid #f0ebe4;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+.aq-trust-item{
+  display:flex;align-items:center;gap:8px;
+  font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#888;
+}
+.aq-trust-icon{font-size:15px}
+</style>
+
+<!-- Featured Products & Collections -->
+<section class="aq-boost-section">
+  <div class="aq-boost-inner">
+    <p class="aq-boost-eyebrow">Shop Aquamiato</p>
+    <h2 class="aq-boost-title">Luxury Swimwear &amp; Lingerie</h2>
+    <p class="aq-boost-sub">Free worldwide shipping · New arrivals weekly · 30-day returns</p>
+
+    <div class="aq-cols-row">
+      <a href="https://aquamiato.com/collections/all" class="aq-col-pill" target="_blank" rel="noopener">All Swimwear</a><a href="https://aquamiato.com/collections/bikini-sets" class="aq-col-pill" target="_blank" rel="noopener">Bikini Sets</a><a href="https://aquamiato.com/collections/one-pieces" class="aq-col-pill" target="_blank" rel="noopener">One-Pieces</a><a href="https://aquamiato.com/collections/lingerie" class="aq-col-pill" target="_blank" rel="noopener">Lingerie</a><a href="https://aquamiato.com/collections/new-arrivals" class="aq-col-pill" target="_blank" rel="noopener">New Arrivals</a>
+    </div>
+
+    <div class="aq-prod-grid">
+      
+      <a href="https://aquamiato.com/products/womens-hollowed-out-sexy-bikini-set-with-push-up-design-and-sweet-floral-print" class="aq-prod-card" target="_blank" rel="noopener">
+        <div class="aq-prod-img" style="background:linear-gradient(135deg,#1a2a3a,#0d1a26)">
+          <span style="font-size:28px;opacity:0.4">👙</span>
+        </div>
+        <div class="aq-prod-info">
+          <div class="aq-prod-name">Hollowed-Out Bikini Set</div>
+          <div class="aq-prod-price">$33</div>
+        </div>
+      </a>
+      <a href="https://aquamiato.com/products/sexy-3d-floral-bra-bikini-with-high-slit-solid-color-swimsuit-set" class="aq-prod-card" target="_blank" rel="noopener">
+        <div class="aq-prod-img" style="background:linear-gradient(135deg,#1a2a3a,#0d1a26)">
+          <span style="font-size:28px;opacity:0.4">👙</span>
+        </div>
+        <div class="aq-prod-info">
+          <div class="aq-prod-name">3D Floral One-Piece</div>
+          <div class="aq-prod-price">$33</div>
+        </div>
+      </a>
+      <a href="https://aquamiato.com/products/beaded-accessory-adjustable-waist-ruffled-bikini-swimsuit-for-women" class="aq-prod-card" target="_blank" rel="noopener">
+        <div class="aq-prod-img" style="background:linear-gradient(135deg,#1a2a3a,#0d1a26)">
+          <span style="font-size:28px;opacity:0.4">👙</span>
+        </div>
+        <div class="aq-prod-info">
+          <div class="aq-prod-name">Beaded Ruffled Bikini</div>
+          <div class="aq-prod-price">$38</div>
+        </div>
+      </a>
+      <a href="https://aquamiato.com/products/printed-pendant-adjustable-waistband-triangle-bra-bikini-two-piece-swimsuit" class="aq-prod-card" target="_blank" rel="noopener">
+        <div class="aq-prod-img" style="background:linear-gradient(135deg,#1a2a3a,#0d1a26)">
+          <span style="font-size:28px;opacity:0.4">👙</span>
+        </div>
+        <div class="aq-prod-info">
+          <div class="aq-prod-name">Triangle Pendant Bikini</div>
+          <div class="aq-prod-price">$34</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="aq-cta-row">
+      <a href="https://aquamiato.com/collections/all" class="aq-cta-primary" target="_blank" rel="noopener">View All Products</a>
+      <a href="https://aquamiato.com/collections/new-arrivals" class="aq-cta-ghost" target="_blank" rel="noopener">New Arrivals →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Bar -->
+<div class="aq-trust-bar">
+  <div class="aq-trust-item"><span class="aq-trust-icon">🌍</span> Free Worldwide Shipping</div>
+  <div class="aq-trust-item"><span class="aq-trust-icon">↩</span> 30-Day Returns</div>
+  <div class="aq-trust-item"><span class="aq-trust-icon">🔒</span> Secure Checkout</div>
+  <div class="aq-trust-item"><span class="aq-trust-icon">⭐</span> 4.9 / 5 Rating</div>
+</div>
+
+<!-- Newsletter -->
+<section class="aq-nl-section">
+  <div class="aq-nl-inner">
+    <h3 class="aq-nl-title">Join the Inner Circle</h3>
+    <p class="aq-nl-sub">New drops, private sales &amp; style notes — straight to your inbox.</p>
+    <form class="aq-nl-form" action="https://aquamiato.com/contact#contact_form" method="get" target="_blank">
+      <input class="aq-nl-input" type="email" name="contact[email]" placeholder="Your email address" />
+      <button class="aq-nl-btn" type="submit">Subscribe</button>
+    </form>
+    <p class="aq-nl-note">No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+<script>
+// Mobile nav toggle
+(function(){
+  var toggle = document.querySelector('.aq-mob-toggle');
+  var navWrap = document.querySelector('.aq-nav-links-wrap');
+  var close = document.querySelector('.aq-mob-close');
+  if(toggle && navWrap){
+    toggle.addEventListener('click', function(){ navWrap.classList.add('open'); });
+    if(close) close.addEventListener('click', function(){ navWrap.classList.remove('open'); });
+    navWrap.addEventListener('click', function(e){ if(e.target===navWrap) navWrap.classList.remove('open'); });
+  }
+})();
+</script>
+<!-- ══ END AQUAMIATO TRAFFIC BOOST ══ -->
 
   </body>
 </html>
