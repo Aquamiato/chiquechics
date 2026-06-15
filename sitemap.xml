@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
   <url>
     <loc>https://chiquechics.com/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chiquechics.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chiquechics.com/"/>
+    <image:image>
+      <image:loc>https://aquamiato.com/cdn/shop/files/brasilian-model-in-bikini-lyes-on-beach.png</image:loc>
+      <image:title>Luxury Swimwear &amp; Bikinis for Women</image:title>
+      <image:caption>Shop luxury swimwear, bikinis and beachwear. Free worldwide shipping.</image:caption>
+    </image:image>
   </url>
+
 </urlset>
