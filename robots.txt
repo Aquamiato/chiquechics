@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://chiquechics.com/sitemap.xml
+
+# Block common bot traps
+Disallow: /cdn-cgi/
+Disallow: /.git/
