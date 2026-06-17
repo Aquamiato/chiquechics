@@ -1,4 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="32" fill="#a855f7"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-size="32" font-family="serif">🌊</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="114" fill="#0b0f1a"/>
+  <!-- Stylized M with mirror/reflection concept -->
+  <text x="256" y="340" 
+    font-family="Georgia, serif" 
+    font-size="320" 
+    font-weight="700"
+    text-anchor="middle" 
+    fill="#c9a96e"
+    letter-spacing="-10">M</text>
+  <!-- Gold underline accent -->
+  <rect x="120" y="370" width="272" height="6" rx="3" fill="#c9a96e" opacity="0.4"/>
 </svg>
