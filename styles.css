@@ -1,0 +1,395 @@
+:root {
+  color-scheme: dark;
+  /* Premium editorial serif for headers, clean geometric sans-serif for body */
+  --font-display: "Playfair Display", "Didot", "Bodoni MT", serif;
+  --font-sans: "Inter", "Montserrat", system-ui, sans-serif;
+  
+  /* Brand Palette: Luxe Minimalist */
+  --bg-main: #0a0a0a;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --border-color: rgba(255, 255, 255, 0.07);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --accent-gold: #d4af37; /* Subtle chic gold for accents/hover hooks */
+  
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  background: var(--bg-main);
+  font-size: 16px;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  /* Ultra-smooth luxury vignette background */
+  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.05), transparent 45%),
+              radial-gradient(circle at 0% 100%, rgba(255, 255, 255, 0.02), transparent 30%),
+              var(--bg-main);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --- Header & Navigation --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 3rem;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.brand a {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.site-nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--text-primary);
+}
+
+main {
+  overflow: hidden;
+}
+
+/* --- Hero Section --- */
+.hero {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* Editorial cinematic gradient overlay */
+.hero-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.15) 0%, rgba(10, 10, 10, 0.85) 100%);
+  z-index: 1;
+}
+
+.hero-media video, 
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 100%;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  color: var(--text-primary);
+  display: grid;
+  gap: 1.5rem;
+  padding: 6rem 1rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.hero-text {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+/* --- Buttons --- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 2.2rem;
+  border-radius: 0px; /* Sharp edges offer a cleaner look for high-fashion sites */
+  border: 1px solid transparent;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: none;
+  letter-spacing: 0.18em; /* Subtle expansion effect instead of jumpy movement */
+}
+
+.button-primary {
+  background: var(--text-primary);
+  color: var(--bg-main);
+}
+
+.button-primary:hover {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.button-secondary:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--text-primary);
+}
+
+/* --- Features / Collection Grid --- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  padding: 6rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0px; /* Minimalist sharp luxury edges */
+  padding: 2.5rem;
+  min-height: 250px;
+  display: grid;
+  align-content: space-between;
+  gap: 1.5rem;
+  transition: border-color 0.4s ease, background-color 0.4s ease;
+}
+
+.feature-card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.feature-card h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+/* --- Highlight / Editorial Showcase --- */
+.highlight {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.highlight-copy {
+  color: var(--text-primary);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.highlight-copy h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.highlight-copy p {
+  color: var(--text-secondary);
+  max-width: 36rem;
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.highlight-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* --- News / Journal Section --- */
+.news {
+  padding: 4rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+}
+
+.news-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0px;
+  padding: 3.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.news-card h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.news-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  max-width: 42rem;
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+/* --- Footer --- */
+.site-footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 960px) {
+  .features,
+  .highlight {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 4rem 2rem;
+  }
+
+  .hero {
+    min-height: 85vh;
+    padding: 2rem;
+  }
+
+  .hero-copy {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center; /* Center brand elements nicely on small mobile screens */
+    padding: 1.5rem 1rem;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+  }
+  
+  .news-card {
+    padding: 2rem 1.5rem;
+  }
+}

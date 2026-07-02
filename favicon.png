@@ -1,0 +1,3 @@
+git add favicon.png
+git commit -m "Add Chique Chics luxury favicon"
+git push origin main
